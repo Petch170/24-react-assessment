@@ -1,31 +1,98 @@
-/* /* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-*/
-
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 ul {
   display: flex;
-  padding: 20px;
-  font-family: 'Inter', sans-serif;
+  padding: 30px;
   font-size: 20px;
-background-color: chartreuse;
+  background-color: rgb(185, 186, 185);
+  justify-content: flex-end;
+  gap: 40px;
 
 }
 
-li{
+li {
   display: flex;
   list-style: none;
   padding-right: 20px;
-  justify-content: space-between;
-  
+
 }
-a{
+
+a {
   text-decoration: none;
+  margin-left: auto;
+}
+
+.btnbox {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 20px;
+  margin: 30px;
+  border-radius: 5px;
+  height: 56px;
+  background-color: #ffffff;
+  color: rgb(1, 1, 1);
+  font-size: 16px;
+  font-weight: 700px;
+}
+
+h1 {
+  margin: 30px;
+  text-align: center;
+}
+
+.tablebox{
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+}
+th,td{
+  border: 1px solid black;
+padding: 5px;
+width: 200px;
+}
+.formbox{
+display: flex;
+justify-content: center;
+margin: 20px;
+gap:15px;
+}
+
+input{
+  padding: 3px;
+  width: 300px;
+  height: 48px;
+}
+
+button.del{
+  text-align: center;
+  color: red;
+  cursor: pointer;
+  border: none;
+  background: none;
+ width: 100%;
+ font-size: 1rem;
+}
+
+button.savebtn{
+  /* padding: 10px,15px,10px,15px; */
+  border-radius: 5px;
+  background-color: blue;
+  color: rgb(255, 255, 255);
+  width: 63px;
+  height: 48px;
+}
+
+.owner {
+  text-align: center;
 }

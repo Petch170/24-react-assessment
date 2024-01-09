@@ -6,9 +6,9 @@ const Button = (props) => {
 const setBtn = props.btn
 
   return (
-    <div>
-      <button onClick={()=>setBtn("user")}>User Home Sector</button>
-      <button onClick={()=>setBtn("admin")}>Admin Home Sector</button>
+    <div className="btnbox">
+      <button className="btn" onClick={()=>setBtn("user")}>User Home Sector</button>
+      <button className="btn" onClick={()=>setBtn("admin")}>Admin Home Sector</button>
     </div>
   );
 };

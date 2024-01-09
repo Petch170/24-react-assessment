@@ -10,7 +10,7 @@ const Admin = ({ employees, setEmployees, delData }) => {
   const [position, setPosition] = useState();
 
   function saveButton(e) {
-    e.preventDefault();//
+    e.preventDefault(); //
 
     const id = Math.floor(Math.random() * 100);
     const showData = {
@@ -26,8 +26,8 @@ const Admin = ({ employees, setEmployees, delData }) => {
   return (
     <div>
       <div>
-        <form>
-          <label htmlFor="create">Create User Here</label>
+      <h1>Create User Here</h1> 
+        <form className="formbox">
           <input
             type="text"
             name="name"
@@ -46,33 +46,35 @@ const Admin = ({ employees, setEmployees, delData }) => {
             placeholder="Position"
             onChange={(e) => setPosition(e.target.value)}
           />
-          <button onClick={saveButton}> Save</button>
+          <button className="savebtn" onClick={saveButton}> Save</button>
         </form>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Last Name</th>
-            <th>Positon</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {employees.map((data) => {
-            return (
-              <tr key={data.id}>
-                <td> {data.name}</td>
-                <td> {data.lastname}</td>
-                <td> {data.position}</td>
-                <td>
-                  <button onClick={() => delData(data.id)}>Delete</button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="tablebox">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Positon</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {employees.map((data) => {
+              return (
+                <tr key={data.id}>
+                  <td> {data.name}</td>
+                  <td> {data.lastname}</td>
+                  <td> {data.position}</td>
+                  <td>
+                    <button className="del" onClick={() => delData(data.id)}>Delete</button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
